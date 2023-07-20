@@ -81,8 +81,9 @@ def locate_card(cards, query):
     # Create a variable position with the value 0
     position = 0
     
-    # Setup a loop to cycle through our cards lst
-    while True:
+    # Setup a loop to cycle through our cards list
+    # Loop initates as long as the array has values
+    while position < len(cards):
         
         # Check if our element at current position matches the query value
         if cards[position] == query:
