@@ -77,7 +77,7 @@ tests.append({'input': {
               'output': 2
         })
 
-def locate_card(cards, query):
+def linear_locate_card(cards, query):
     # Create a variable position with the value 0
     position = 0
     
@@ -100,5 +100,26 @@ def locate_card(cards, query):
             # Our Query number was not found
             return -1
 
-print(locate_card(test['input']['cards'], test['input']['query']))
+#print(linear_locate_card(test['input']['cards'], test['input']['query']))
 
+def find_middle_card(cards):
+    if len(cards) == 0:
+        return "The Array is Empty"
+    
+    middle_pos = float(len(cards)) / 2
+
+    if middle_pos % 2 != 0:
+        return cards[int(middle_pos - .5)]
+    else:
+        return (cards[int(middle_pos)], cards[int(middle_pos-1)]) 
+
+
+def binary_locate_card(cards, query):
+    
+    
+    pass
+
+#print(len(test['input']['cards']))
+#print(find_middle_card(test['input']['cards']))
+
+print(tests)
